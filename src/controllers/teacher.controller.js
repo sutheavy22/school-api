@@ -142,7 +142,7 @@ export const deleteTeacher = async (req, res) => {
         if (!teacher) return res.status(404).json({ message: 'Not found' });
         await teacher.destroy();
         res.json({ message: 'Deleted' });
-    } catch (err) {
+    } catch (err) { 
         res.status(500).json({ error: err.message });
     }
 };
